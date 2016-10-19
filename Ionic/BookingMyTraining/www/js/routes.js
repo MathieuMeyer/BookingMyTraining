@@ -15,7 +15,7 @@ angular.module('app.routes', [])
   })
 
   .state('menu.profil', {
-    url: '/page1',
+    url: '/profilPage',
     views: {
       'menu': {
         templateUrl: 'templates/profil.html',
@@ -46,7 +46,7 @@ angular.module('app.routes', [])
 
 
   .state('menu.search', {
-    url: '/page4',
+    url: '/searchPage',
     views: {
       'menu': {
         templateUrl: 'templates/search.html',
@@ -55,12 +55,12 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('menu.connection', {
-    url: '/connectionPage',
+  .state('menu.connexion', {
+    url: '/connexionPage',
     views: {
       'menu': {
-        templateUrl: 'templates/connection.html',
-        controller: 'connectionCtrl'
+        templateUrl: 'templates/Home/connexion.html',
+        controller: 'connexionCtrl'
       }
     }
   })
@@ -69,7 +69,7 @@ angular.module('app.routes', [])
     url: '/choicePage',
     views: {
       'menu': {
-        templateUrl: 'templates/choice.html',
+        templateUrl: 'templates/Home/choice.html',
         controller: 'choiceCtrl'
       }
     }
@@ -86,27 +86,35 @@ angular.module('app.routes', [])
   })
 
   .state('menu.formCompany', {
-    url: '/formCompany',
+    url: '/formCompanyPage',
     views: {
       'menu': {
-        templateUrl: 'templates/formCompany.html',
+        templateUrl: 'templates/Home/formCompany.html',
         controller: 'formCompanyCtrl'
       }
     }
   })
 
   .state('menu.formStudent', {
-    url: '/formStudent',
+    url: '/formStudentPage',
     views: {
       'menu': {
-        templateUrl: 'templates/formStudent.html',
+        templateUrl: 'templates/Home/formStudent.html',
         controller: 'formStudentCtrl'
       }
     }
   })
 
+  .state('menu.updateStudent', {
+    url: '/updateStudentPage',
+    views: {
+      'menu': {
+        templateUrl: 'templates/updateStudent.html',
+        controller: 'updateStudentCtrl'
+      }
+    }
+  })
 
-
-$urlRouterProvider.otherwise('/menu/page1')
+$urlRouterProvider.otherwise('/menu/connexionPage')
 
 });

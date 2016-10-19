@@ -1,4 +1,4 @@
-<ion-view title="formCompany" id="formCompany">
+<ion-view title="Mes informations personnelles" id="updateStudentPage">
     <ion-content padding="true" class="has-header">
     	<div class="list">
     		<div class="list">
@@ -6,16 +6,10 @@
 			    	<input type="text" placeholder="Pseudo">
 			  	</label>
 			  	<label class="item item-input">
-			    	<input type="text" placeholder="Mot de passe">
-			  	</label>
-			  	<label class="item item-input">
-			    	<input type="text" placeholder="Email">
-			  	</label>
-			  	<label class="item item-input">
 			    	<input type="text" placeholder="Nom">
 			  	</label>
 			  	<label class="item item-input">
-			    	<input type="text" placeholder="Prènom">
+			    	<input type="text" placeholder="Prénom">
 			  	</label>
 			  	<label class="item item-input">
 			    	<input type="text" placeholder="Adrese">
@@ -26,13 +20,11 @@
 			  	<label class="item item-input">
 			    	<input type="text" placeholder="Téléphone mobile">
 			  	</label>
-			  	<label class="item item-input">
-			    	<input type="text" placeholder="Téléphone fix">
-			  	</label>
-				<a ui-sref="menu.profil" id="choiceFormStudentButton" class="button button-stable  button-block">
-					Valider
-				</a>
-			</div>
+				</div>
+				<div class="button-bar">
+					<a ui-sref="menu.profil" id="updateStudentButtonKO" class="button button-slave">Annuler</a>
+					<a ui-sref="menu.search" id="updateStudentButtonOK" class="button button-positive">Enregistrer</a>
+				</div>
 		</div>
     </ion-content>
 </ion-view>

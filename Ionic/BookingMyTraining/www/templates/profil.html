@@ -1,5 +1,22 @@
-<ion-view title="Profil" id="page1">
-    <ion-content padding="true" class="has-header">
-    	<h1>Profil</h1>
+<ion-view title="Mon compte" id="profilPage">
+    <ion-content padding="true" class="has-header">	
+    	<div class="profile-image">
+        	<img src="img/AvatarSilhouette.jpg" width="50%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+        </div>
+
+                <ion-nav-buttons side="left">
+            <a class="button button-icon icon ion-navicon"></a>
+        </ion-nav-buttons>
+
+        <h2 id="menu-heading1" style="color:#000000;font-weight:300;text-align:center;" class="side-heading-item">User-name</h2>
+
+        <ion-list id="menu-list1">
+                <ion-item class="item-icon-left  side-menu-item" id="menu-list-item1" ng-click = "showConfirm()">
+                    <i class="icon ion-android-arrow-dropright"></i>Changer mon mot de passe</ion-item>
+                <ion-item class="item-icon-left  side-menu-item" id="menu-list-item2" ui-sref="menu.updateStudent" menu-close="">
+                    <i class="icon ion-android-arrow-dropright"></i>Informations personnelles</ion-item>
+        </ion-list>
+
+		<a ui-sref="menu.connexion" id="deconectButton" class="button button-stable  button-block">Déconnexion</a>
     </ion-content>
 </ion-view>

@@ -7,7 +7,6 @@ function ($scope, $stateParams) {
 }])
 
 .controller('cvCtrl', ['$scope', '$stateParams',function ($scope, $stateParams) {
-
 }])
 
 .controller('settingsCtrl', ['$scope', '$stateParams',function ($scope, $stateParams) {
@@ -19,7 +18,7 @@ function ($scope, $stateParams) {
 .controller('searchCtrl', ['$scope', '$stateParams', function ($scope, $stateParams) {
 }])
 
-.controller('connectionCtrl', ['$scope', '$stateParams',function ($scope, $stateParams) {
+.controller('connexionCtrl', ['$scope', '$stateParams',function ($scope, $stateParams) {
 }])
 
 .controller('choiceCtrl', ['$scope', '$stateParams',function ($scope, $stateParams) {
@@ -33,3 +32,18 @@ function ($scope, $stateParams) {
 
 .controller('formStudentCtrl', ['$scope', '$stateParams',function ($scope, $stateParams) {
 }])
+
+.controller('updateStudentCtrl', ['$scope', '$stateParams',function ($scope, $stateParams) {
+}])
+
+.controller('profilCtrl', function($scope, $ionicPopup) {
+
+   $scope.showConfirm = function() {
+
+      var confirmPopup = $ionicPopup.confirm({
+         title: 'Changer mon mot de passe',
+         subTitle :'Un lien vous permettant de modifier votre mot de passe vous sera envoyé par email',
+         template: 'Confirmer la modification ?'
+      });		
+   };
+})
