@@ -85,6 +85,26 @@ angular.module('app.routes', [])
     }
   })
 
+  .state('menu.formCompany', {
+    url: '/formCompany',
+    views: {
+      'menu': {
+        templateUrl: 'templates/formCompany.html',
+        controller: 'formCompanyCtrl'
+      }
+    }
+  })
+
+  .state('menu.formStudent', {
+    url: '/formStudent',
+    views: {
+      'menu': {
+        templateUrl: 'templates/formStudent.html',
+        controller: 'formStudentCtrl'
+      }
+    }
+  })
+
 
 
 $urlRouterProvider.otherwise('/menu/page1')
