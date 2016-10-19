@@ -8,9 +8,13 @@ angular.module('app.routes', [])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
+  .state('menu', {
+    url: '/menu',
+    templateUrl: 'templates/menu.html',
+    controller: 'menuCtrl'
+  })
 
-
-    .state('menu.profil', {
+  .state('menu.profil', {
     url: '/page1',
     views: {
       'menu': {
@@ -51,14 +55,38 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('menu', {
-    url: '/menu',
-    templateUrl: 'templates/menu.html',
-    controller: 'menuCtrl'
+  .state('menu.connection', {
+    url: '/connectionPage',
+    views: {
+      'menu': {
+        templateUrl: 'templates/connection.html',
+        controller: 'connectionCtrl'
+      }
+    }
   })
 
+  .state('menu.choice', {
+    url: '/choicePage',
+    views: {
+      'menu': {
+        templateUrl: 'templates/choice.html',
+        controller: 'choiceCtrl'
+      }
+    }
+  })
+
+  .state('menu.candidature', {
+    url: '/candidaturePage',
+    views: {
+      'menu': {
+        templateUrl: 'templates/candidature.html',
+        controller: 'candidatureCtrl'
+      }
+    }
+  })
+
+
+
 $urlRouterProvider.otherwise('/menu/page1')
-
-
 
 });
