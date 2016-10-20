@@ -36,6 +36,9 @@ function ($scope, $stateParams) {
 .controller('updateStudentCtrl', ['$scope', '$stateParams',function ($scope, $stateParams) {
 }])
 
+.controller('internshipPropositionCtrl', ['$scope', '$stateParams',function ($scope, $stateParams) {
+}])
+
 .controller('profilCtrl', function($scope, $ionicPopup) {
 
    $scope.showConfirm = function() {
@@ -44,6 +47,6 @@ function ($scope, $stateParams) {
          title: 'Changer mon mot de passe',
          subTitle :'Un lien vous permettant de modifier votre mot de passe vous sera envoyé par email',
          template: 'Confirmer la modification ?'
-      });		
+      });
    };
 })

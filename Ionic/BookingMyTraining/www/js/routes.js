@@ -115,6 +115,16 @@ angular.module('app.routes', [])
     }
   })
 
+  .state('menu.internshipProposition', {
+    url: '/internshipPropositionPage',
+    views: {
+      'menu': {
+        templateUrl: 'templates/Home/internshipProposition.html',
+        controller: 'internshipPropositionCtrl'
+      }
+    }
+  })
+
 $urlRouterProvider.otherwise('/menu/connexionPage')
 
 });
