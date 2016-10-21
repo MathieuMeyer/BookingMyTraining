@@ -8,6 +8,12 @@ angular.module('app.routes', [])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
+  .state('login', {
+      url: '/login',
+      templateUrl: 'templates/login.html',
+      controller: 'LoginCtrl'
+  })
+
   .state('menu', {
     url: '/menu',
     templateUrl: 'templates/menu.html',
@@ -126,5 +132,4 @@ angular.module('app.routes', [])
   })
 
 $urlRouterProvider.otherwise('/menu/connexionPage')
-
 });

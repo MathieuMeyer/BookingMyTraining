@@ -1,33 +1,21 @@
 <ion-view title="Proposition de stage" id="internshipPropositionPage">
     <ion-content padding="true" class="has-header">
+    <div ng-controller="Hello">
 		<center><img src="img/company1.png" style="height: 100px">
 		<button class="button button-calm" style="top: 10px" ui-sref="menu.candidature">
 		  	Poster ma candidature
 		</button></center>
-		<p style="font-weight: bold;">Titre: </p><p>Chargé de projet / Développeur informatique (H/F).
-		</p><p style="font-weight: bold;">Type de poste : </p><p>Stage de 6 mois
-		</p><p style="font-weight: bold;">Niveau de formation :</p><p> BAC +5 (Master d’Informatique, Ecole d’Ingénieur en Informatique)
-		</p><p style="font-weight: bold;">Nombre de poste(s) : </p><p>1
-		</p><p style="font-weight: bold;">Compétence : </p><p>Génie informatique / Télécommunications
-		</p><p style="font-weight: bold;">Zone géographique : </p><p>Nord-Pas de Calais
-		</p><p style="font-weight: bold;">Département : </p><p>Nord
-		</p><p style="font-weight: bold;">Description des activités :</p><p>
-		Vous serez rattaché à la Direction Régionale Nord Pas-de-Calais. Votre mission sera notamment de développer, pour  le service Ressources Humaines, un outil de réservation et suivi de la restauration méridienne.
-		</p><p style="font-weight: bold;">Principales activités et responsabilités :</p><p>
-		-	Conduite de projet opérationnel applicatif
-		-	Conception et Réalisation d’un cahier des charges
-		-	Analyse, Conception et Développement d'applications web
-		-	Rédaction des documentations fonctionnelles applicatives
-		-	Portage et mise en main des outils auprès des équipes opérationnelles
-		-	Analyse de données
-		</p><p style="font-weight: bold;">Pré-requis demandés :</p><p>
-		Vous êtes étudiant en BAC +4 ou 5 dans le domaine informatique et à la recherche d’un stage d’études
-		</p><p style="font-weight: bold;">Compétences ou expériences professionnelles souhaitées :</p><p>
-		-	Langages Web : HTML 5, CSS 3, PHP 5, JavaScript, JQuery, AJAX.
-		-	Base de données : MySQL. Des connaissances du SGBD Oracle seraient appréciées.
-		-	Framework : la connaissance d’un Framework PHP et du modèle MVC est un plus (ex : CodeIgniter).
-		-	Bureautique : des connaissances du langage VBA et des outils Excel / Access sont un plus, ainsi que la capacité à construire des tableaux de bord lisibles et autoporteurs.
-		</p><p style="font-weight: bold;">Qualités requises :</p><p>
-		Dynamique et investi, force de proposition, vous êtes organisé et possédez des qualités relationnelles. Vous êtes rigoureux, précis et autonome dans votre travail, avez un esprit d’analyse développé qui vous permettra de mener à bien vos missions. Votre curiosité et votre capacité à travailler en équipe seront également appréciées.</p>
+		<p style="font-weight: bold;">Titre: </p><p>{{intershipProposition.titre}}
+		</p><p style="font-weight: bold;">Niveau de formation :</p><p> {{intershipProposition.niveau}}
+		</p><p style="font-weight: bold;">Nombre de poste(s) : </p><p>{{intershipProposition.nbpost}}
+		</p><p style="font-weight: bold;">Compétence : </p><p>{{intershipProposition.competence}}
+		</p><p style="font-weight: bold;">Zone géographique : </p><p>{{intershipProposition.zone}}
+		</p><p style="font-weight: bold;">Département : </p><p>{{intershipProposition.departement}}
+		</p><p style="font-weight: bold;">Description des activités :</p><p>{{intershipProposition.description}}
+		</p><p style="font-weight: bold;">Principales activités et responsabilités :</p><p> {{intershipProposition.activite}}
+		</p><p style="font-weight: bold;">Pré-requis demandés :</p><p>{{intershipProposition.prerequis}}
+		</p><p style="font-weight: bold;">Compétences ou expériences professionnelles souhaitées :</p><p>{{intershipProposition.competence}}
+		</p><p style="font-weight: bold;">Qualités requises :</p><p>{{intershipProposition.qualite}}</p>
+        </div>
     </ion-content>
 </ion-view>

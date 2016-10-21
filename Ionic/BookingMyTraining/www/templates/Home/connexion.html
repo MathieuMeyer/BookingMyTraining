@@ -1,20 +1,21 @@
 </div><ion-view title="e-training" id="connexionPage">
-<ion-content padding="true" style="background: url(img/home.jpg) no-repeat center;background-size:cover;" class="has-header">
+<ion-content padding="true" style="background: url(img/home.jpg) no-repeat center;background-size:cover;" class="has-header" ng-controller="myCtrl">
         <div class="spacer" style="width: 1000px; height: 50px;"></div>
 		<label class="item item-input" style="background:transparent">
 			<span class="input-label" style="color:#FFFFFF">Username</span>
-			<input type="text">
+			<input type="text" ng-model="data.username">
 		</label>
 		<label class="item item-input" style="background:transparent">
 			<span class="input-label" style="color:#FFFFFF">Password</span>
-			<input type="password">
+			<input type="password" ng-model="data.password">
 		</label>
 		<div class="spacer" style="width: 1000px; height: 10px;"></div>
-		<button class="button button-block button-positive">
-		  	Connexion
-		</button>
+		<button class="button button-block button-positive" ng-click="login()" > Connexion </button>
 		<a ui-sref="menu.choice" id="inscriptionButton" class="button button-stable  button-block">
 			Inscription
 		</a>
-    </ion-content>
+
+
+
+	</ion-content>
 </ion-view>

@@ -1,10 +1,16 @@
 angular.module('app.controllers', [])
 
-.controller('profilCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
+.controller('profilCtrl', ['$scope', '$stateParams',function ($scope, $stateParams) {
 }])
+
+.controller('myCtrl', ['$scope',function ($scope) {
+  $scope.count = 1;
+  $scope.user = {name: '', last: ''};
+  if ($scope.user.name == $scope.user.last) {
+    $scope.count = { value : '0'};
+  };
+}])
+
 
 .controller('cvCtrl', ['$scope', '$stateParams',function ($scope, $stateParams) {
 }])
@@ -39,10 +45,7 @@ function ($scope, $stateParams) {
 .controller('internshipPropositionCtrl', ['$scope', '$stateParams',function ($scope, $stateParams) {
 }])
 
-.controller('profilCtrl', function($scope, $ionicPopup) {
-
-   $scope.showConfirm = function() {
-
+.controller('profilCtrl', function($scope, $ionicPopup) { $scope.showConfirm = function() {
       var confirmPopup = $ionicPopup.confirm({
          title: 'Changer mon mot de passe',
          subTitle :'Un lien vous permettant de modifier votre mot de passe vous sera envoyé par email',
@@ -50,3 +53,13 @@ function ($scope, $stateParams) {
       });
    };
 })
+.controller('Hello', function($scope, $http) {
+    $http.get('http://demo6542155.mockable.io/connection').
+        then(function(response) {
+            $scope.connection = response.data;
+        });
+    $http.get('http://demo6542155.mockable.io/intershipProposition').
+    then(function(response) {
+        $scope.intershipProposition = response.data;
+    });
+});
